@@ -1,0 +1,5 @@
+mutation M {
+  updateTransactions_TransactionLine(input: {clientMutationId : "0", transactionsTransactionLine : {id : "djQuMTo5MTMwMzUxMzQ0MzE0MTg2Ojk3ODhjZjQ3NWI:0-0", account : {id : "djQuMTo5MTMwMzUxMzQ0MzE0MTg2OjUxY2VkODUzNmM:231"}, batchUpdateFilters : {batchOperationName : "tickAll", filterProperties : [{name : "manualTxns", value : "false"}, {name : "reconcileStatus", value : "2"}]}}}) {
+    clientMutationId
+  }
+}

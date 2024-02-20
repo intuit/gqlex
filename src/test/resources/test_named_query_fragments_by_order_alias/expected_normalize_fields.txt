@@ -1,0 +1,10 @@
+QUERY.hero.actor.id
+QUERY.hero.actor.name
+QUERY.hero.actor.birthCountry
+QUERY.hero.actor.age
+QUERY.hero.actor.shows.id
+QUERY.hero.actor.shows.__typename
+QUERY.hero.actor.shows.r:actors.id
+QUERY.hero.actor.shows.r:actors.name
+QUERY.hero.actor.shows.r:actors.birthCountry
+QUERY.hero.actor.shows.r:actors.age

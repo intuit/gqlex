@@ -1,0 +1,5 @@
+mutation M {
+  updateTransactions_TransactionLine(input: {aaaaaa : "123", bbbbb : "456",}) {
+    clientMutationId
+  }
+}

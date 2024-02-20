@@ -1,0 +1,25 @@
+query {
+  Instrument(id: "1234") {
+    aliasme: Reference {
+      Name
+      title
+    }
+    aliasme: Reference {
+      Name
+      title
+    }
+    aliasme: Reference {
+      Name
+      title
+    }
+
+    aliasfor: Reference {
+      Name
+      title
+    }
+    aliasfor: Reference {
+      Name
+      title
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    query a1 {
+      me {
+        name @export(as: "search")
+        id
+      }
+    }
+
+    query a2 @depends(on: "GetLoggedInUserName") {
+      posts(filter: { search: $search }) {
+        id
+        title
+      }
+    }
+
+
+    query a3 @depends(on: "GetLoggedInUserName") {
+          posts(filter: { search: $search }) {
+            id
+            b{
+                title
+            }
+          }
+        }
+}

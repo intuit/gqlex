@@ -1,0 +1,419 @@
+query getAppDetail($appId: ID!) {
+  node(id: $appId) {
+    ... on AAAAA_bbbbbbb {
+        logoUrl
+        name
+        id
+        permalink
+        categories
+        builtByIntuit
+        supportedCountries
+        questionnaireReviews {
+          name
+          status
+          rejectionSeverity
+          rejectionReason
+          __typename
+        }
+        reviewSummary {
+          id
+          __typename
+        }
+        allUseCasesMetadata {
+          categoryId
+          categoryName
+          tasks {
+            taskId
+            taskName
+            __typename
+          }
+          __typename
+        }
+        useCases {
+          categoryId
+          tasks {
+            taskId
+            __typename
+          }
+          __typename
+        }
+        hostingDetails {
+          country
+          ipRanges {
+            ipRangeId
+            start
+            end
+            __typename
+          }
+          __typename
+        }
+        scopes {
+          edges {
+            node {
+              id
+              name
+              legalText
+              grant
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        allowedScopes {
+          allowed
+          name
+          __typename
+        }
+        eulaUrl
+        privacyPolicyUrl
+        authType
+        singleSignOn
+        accountantReady
+        accountantReadyPreference
+        referral
+        migratedAndOauth2Ready
+        regulatedIndustries
+        behaviors {
+          premiumApp
+          disableQuestionnaireRequirement
+          __typename
+        }
+        deepLinkLogoUrl
+        deepLinks {
+          edges {
+            node {
+              id
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        appCards {
+          edges {
+            node {
+              id
+              locale
+              publishingCountry
+              publishingLanguage
+              publishedInAppCenter
+              marketingReview
+              technicalReview
+              securityReview
+              complianceReview
+              annualSecurityReview
+              dateListedInAppCenter
+              dateRemovedFromAppCenter
+              annualReviewDueDate
+              appCardDetails {
+                edges {
+                  node {
+                    id
+                    state
+                    __typename
+                  }
+                  __typename
+                }
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        sandbox: properties(filterBy: "type = 'SANDBOX'") {
+          edges {
+            node {
+              id
+              type
+              urls {
+                hostDomain
+                launch
+                disconnect
+                oauth1 {
+                  openId
+                  __typename
+                }
+                oauth2 {
+                  connectRequest
+                  __typename
+                }
+                __typename
+              }
+              credentials {
+                oauth1 {
+                  consumerKey
+                  consumerSecret
+                  appToken
+                  __typename
+                }
+                oauth2 {
+                  appToken
+                  clientId
+                  clientSecret
+                  redirectUrls
+                  __typename
+                }
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        production: properties(filterBy: "type = 'PRODUCTION'") {
+          edges {
+            node {
+              id
+              type
+              urls {
+                hostDomain
+                launch
+                disconnect
+                oauth1 {
+                  openId
+                  __typename
+                }
+                oauth2 {
+                  connectRequest
+                  __typename
+                }
+                __typename
+              }
+              credentials {
+                oauth1 {
+                  consumerKey
+                  consumerSecret
+                  appToken
+                  __typename
+                }
+                oauth2 {
+                  appToken
+                  clientId
+                  clientSecret
+                  redirectUrls
+                  __typename
+                }
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+    ... on Developer_Application {
+      logoUrl
+      name
+      id
+      permalink
+      categories
+      builtByIntuit
+      supportedCountries
+      questionnaireReviews {
+        name
+        status
+        rejectionSeverity
+        rejectionReason
+        __typename
+      }
+      reviewSummary {
+        id
+        __typename
+      }
+      allUseCasesMetadata {
+        categoryId
+        categoryName
+        tasks {
+          taskId
+          taskName
+          __typename
+        }
+        __typename
+      }
+      useCases {
+        categoryId
+        tasks {
+          taskId
+          __typename
+        }
+        __typename
+      }
+      hostingDetails {
+        country
+        ipRanges {
+          ipRangeId
+          start
+          end
+          __typename
+        }
+        __typename
+      }
+      scopes {
+        edges {
+          node {
+            id
+            name
+            legalText
+            grant
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      allowedScopes {
+        allowed
+        name
+        __typename
+      }
+      eulaUrl
+      privacyPolicyUrl
+      authType
+      singleSignOn
+      accountantReady
+      accountantReadyPreference
+      referral
+      migratedAndOauth2Ready
+      regulatedIndustries
+      behaviors {
+        premiumApp
+        disableQuestionnaireRequirement
+        __typename
+      }
+      deepLinkLogoUrl
+      deepLinks {
+        edges {
+          node {
+            id
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      appCards {
+        edges {
+          node {
+            id
+            locale
+            publishingCountry
+            publishingLanguage
+            publishedInAppCenter
+            marketingReview
+            technicalReview
+            securityReview
+            complianceReview
+            annualSecurityReview
+            dateListedInAppCenter
+            dateRemovedFromAppCenter
+            annualReviewDueDate
+            appCardDetails {
+              edges {
+                node {
+                  id
+                  state
+                  __typename
+                }
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      sandbox: properties(filterBy: "type = 'SANDBOX'") {
+        edges {
+          node {
+            id
+            type
+            urls {
+              hostDomain
+              launch
+              disconnect
+              oauth1 {
+                openId
+                __typename
+              }
+              oauth2 {
+                connectRequest
+                __typename
+              }
+              __typename
+            }
+            credentials {
+              oauth1 {
+                consumerKey
+                consumerSecret
+                appToken
+                __typename
+              }
+              oauth2 {
+                appToken
+                clientId
+                clientSecret
+                redirectUrls
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      production: properties(filterBy: "type = 'PRODUCTION'") {
+        edges {
+          node {
+            id
+            type
+            urls {
+              hostDomain
+              launch
+              disconnect
+              oauth1 {
+                openId
+                __typename
+              }
+              oauth2 {
+                connectRequest
+                __typename
+              }
+              __typename
+            }
+            credentials {
+              oauth1 {
+                consumerKey
+                consumerSecret
+                appToken
+                __typename
+              }
+              oauth2 {
+                appToken
+                clientId
+                clientSecret
+                redirectUrls
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}

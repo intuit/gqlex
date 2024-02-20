@@ -1,0 +1,23 @@
+fragment actor_frg on Actor{
+      id
+      name
+      birthCountry
+      age
+}
+fragment shows_frg on Show{
+       id
+       __typename
+
+      r: actors @include(if: $withActor){
+        ...actor_frg
+      }
+}
+
+query hero($withfr: Boolean!, $withActor: Boolean!) {
+   actor(id:1){
+    	...actor_frg
+      shows @include(if: $withfr){
+       ...shows_frg
+      }
+    }
+  }

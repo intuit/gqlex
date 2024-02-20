@@ -1,0 +1,1 @@
+{"__operations":{"MyQuery":{"variables":{"__elem_1":{"$showDate":{"type":"Boolean"}}},"allFilms":{"films":{"releaseDate":{"__directs":{"@include":{"__arguments":{"__elem_1":{"if":"$showDate"}}}}},"id":null,"title":null}},"__operationType":"QUERY"}}}

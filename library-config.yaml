@@ -1,0 +1,20 @@
+
+asset_id: 2597468678293652245
+asset_alias: Intuit.fraudprevention.bladegraphqllib
+
+mavenSettingsFileId: ibp-maven-settings-file
+artifactoryCredentialsId: artifactory-blade-graphql-lib
+mavenImage: "oicp/standard/maven/amzn-maven-corretto11:5"
+MAIN_BRANCH: "master"
+groupId: com.intuit.fraudprevention.blade-graphql-lib
+artifactId: blade-graphql-lib
+jacocoExecPattern: "target/*.exec"
+
+githubCredentialsId: "github-svc-sbseg-ci"
+orgRepo: fraudprevention/blade-graphql-lib
+
+CODECOV_CREDENTIALS: ibp-codecov-token
+SONAR_HOST: https://pub-sonarqube-ibp-prod-us-west-2-app.prod1-ibp.a.intuit.com/
+GITHUB_API: https://github.intuit.com/api/v3/
+
+enableJiraTransition: false

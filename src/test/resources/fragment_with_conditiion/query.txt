@@ -1,0 +1,13 @@
+query MyQuery ($showDate: Boolean!){
+  allFilms {
+    films {
+      ...FilmFields
+    }
+  }
+}
+
+fragment FilmFields on Film {
+  id
+  title
+  releaseDate @include(if: $showDate)
+}

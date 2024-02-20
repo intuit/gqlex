@@ -1,0 +1,13 @@
+mutation M {
+  xxxxxxx(
+    input: {
+
+      ccc: {
+
+              e4: "reconcileStatus", value: "2"
+            }
+    }
+  ) {
+    aaaa
+  }
+}

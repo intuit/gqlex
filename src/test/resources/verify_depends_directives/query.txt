@@ -1,0 +1,7 @@
+{
+ GetLoggedInUserName {
+  me {
+    name @export(as: "search")
+  }
+}
+}

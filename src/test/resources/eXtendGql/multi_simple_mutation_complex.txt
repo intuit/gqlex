@@ -1,0 +1,20 @@
+mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    a{
+        b{
+        c{stars}
+        }
+    }
+    b{
+        commentary
+    }
+    a{
+        b{
+                c{stars}
+                }
+    }
+    c{
+        commentary
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "operations": [
+    {
+      "methodName": "createCompany",
+      "__operationType": "MUTATION",
+      "fields": [
+        {
+          "containerField": "createCompany_CompanySetupInfo",
+          "arguments": [
+            {
+              "name": "input",
+              "value": [
+                {
+                  "objectFieldName": "clientMutationId",
+                  "value": [
+                    {
+                      "scalarValue": "StringValue{value='1'}"
+                    }
+                  ]
+                },
+                {
+                  "objectFieldName": "companyCompanySetupInfo",
+                  "value": [
+                    {
+                      "objectFieldName": "profile",
+                      "value": [
+                        {
+                          "objectFieldName": "localization",
+                          "value": [
+                            {
+                              "objectFieldName": "country",
+                              "value": [
+                                {
+                                  "scalarValue": "StringValue{value='US'}"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "objectFieldName": "companyName",
+                          "value": [
+                            {
+                              "scalarValue": "StringValue{value='Rcc Paid company'}"
+                            }
+                          ]
+                        },
+                        {
+                          "objectFieldName": "industryType",
+                          "value": [
+                            {
+                              "scalarValue": "StringValue{value='ALL_OTHER_MISCELLANEOUS_SERVICES'}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "objectFieldName": "companyProfile",
+                      "value": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "field": "clientMutationId"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

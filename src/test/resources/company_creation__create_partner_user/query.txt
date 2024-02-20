@@ -1,0 +1,35 @@
+{
+  "userId": "9130356499451206",
+  "username": "testuser2345_iamtestpass",
+  "namespaceId": "50000003",
+  "securityLevel": "HIGH",
+  "challengeQuestionAnswer": [
+    {
+      "question": "Who was your childhood hero?"
+    }
+  ],
+  "fullName": [
+    {
+      "salutation": "Mrs.",
+      "givenName": "Test123",
+      "middleName": "User123",
+      "surName": "User2345",
+      "suffix": "Sri."
+    }
+  ],
+  "displayName": [
+    "My User234"
+  ],
+  "phone": [
+    {
+      "type": "WORK",
+      "primary": true,
+      "phoneNumber": "+1 6786788989"
+    }
+  ],
+  "email": {
+    "type": "NONE",
+    "primary": true,
+    "address": "Testuser2345_iamtestpass@mailinator.com"
+  }
+}

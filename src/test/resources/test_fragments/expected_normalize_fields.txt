@@ -1,0 +1,6 @@
+QUERY.VOID.leftComparison:hero.name
+QUERY.VOID.leftComparison:hero.appearsIn
+QUERY.VOID.leftComparison:hero.friends.name
+QUERY.VOID.rightComparison:hero.name
+QUERY.VOID.rightComparison:hero.appearsIn
+QUERY.VOID.rightComparison:hero.friends.name

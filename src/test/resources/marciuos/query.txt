@@ -1,0 +1,8 @@
+query myQuery($id: ID){
+    user (id:$id){
+       firstName
+       secure {
+          public_key
+       }
+   }
+}

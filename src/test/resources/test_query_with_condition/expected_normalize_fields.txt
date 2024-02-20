@@ -1,0 +1,2 @@
+QUERY.Hero.hero.name
+QUERY.Hero.hero.friends.name

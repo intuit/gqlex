@@ -1,0 +1,1 @@
+{"__operations":{"VOID":{"rightComparison:hero":{"__arg<<episode>>":{"__enum":"JEDI"},"appearsIn":null,"name":null,"friends":{"name":null}},"__operationType":"QUERY","leftComparison:hero":{"__arg<<episode>>":{"__enum":"EMPIRE"},"appearsIn":null,"name":null,"friends":{"name":null}}}}}

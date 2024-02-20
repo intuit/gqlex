@@ -1,0 +1,3 @@
+query HeroComparison($first: Int = 3) {
+    a
+}

@@ -1,0 +1,2 @@
+QUERY.VOID.Instrument.aliasme:Reference.Name
+QUERY.VOID.Instrument.aliasme:Reference.title

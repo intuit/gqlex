@@ -1,0 +1,3 @@
+QUERY.MyQuery.allFilms.films.id
+QUERY.MyQuery.allFilms.films.title
+QUERY.MyQuery.allFilms.films.releaseDate

@@ -1,0 +1,189 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.intuit.oss.extendgql</groupId>
+    <artifactId>extendgql</artifactId>
+    <version>2.0.0</version>
+    <packaging>jar</packaging>
+    <name>GraphQL extended library</name>
+    <url>https://github.intuit.com/ykarni/eXtendGql</url>
+    <inceptionYear>2023</inceptionYear>
+    <description>
+       Provide GraphQl json conversion and gql extended library.
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <junit.version>5.7.2</junit.version>
+        <jacoco.enabled>true</jacoco.enabled>
+        <jacoco.version>0.8.8</jacoco.version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+        <slf4j-api.version>1.7.36</slf4j-api.version>
+
+        <central.repo>https://artifact.intuit.com/artifactory/maven-proxy/</central.repo>
+        <releasedeployrepo>https://artifactory.a.intuit.com/artifactory/maven.fraudprevention.imvisionintuit-releases</releasedeployrepo>
+        <snapshotdeployrepo>https://artifactory.a.intuit.com/artifactory/maven.fraudprevention.imvisionintuit-snapshots</snapshotdeployrepo>
+    </properties>
+    <scm>
+        <connection>scm:git:https://github.intuit.com/fraudprevention/blade-graphql-lib.git</connection>
+        <developerConnection>scm:git:https://github.intuit.com/fraudprevention/blade-graphql-lib.git</developerConnection>
+        <url>https://github.intuit.com/fraudprevention/blade-graphql-lib</url>
+        <tag>HEAD</tag>
+    </scm>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java</artifactId>
+            <version>20.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.javadev/underscore -->
+        <dependency>
+            <groupId>com.github.javadev</groupId>
+            <artifactId>underscore</artifactId>
+            <version>1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- TEST dependencies follow -->
+        <!-- To see your logging, add logback-classic or log4j2 here, but in test scope only -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <dependencyManagement>
+        <!-- You may wish to let com.intuit.platform.jsk:jsk-bom manage your dependencies by importing it here,
+             as is done with junit-bom; in which case omit slf4j-api from here, as it is included by jsk-bom -->
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <id>prepare</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central-mirror</id>
+            <name>Central Repo</name>
+            <url>${central.repo}</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <!-- Repositories to download remote dependencies -->
+    <repositories>
+        <repository>
+            <id>central-mirror</id>
+            <url>${central.repo}</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>scm.dev.snap.repo</id>
+            <name>SNAPSHOT REPO</name>
+            <url>${snapshotdeployrepo}</url>
+            <layout>default</layout>
+        </snapshotRepository>
+        <repository>
+            <id>scm.int.rel.repo</id>
+            <name>RELEASE REPO</name>
+            <url>${releasedeployrepo}</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+</project>

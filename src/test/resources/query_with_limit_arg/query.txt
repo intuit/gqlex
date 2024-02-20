@@ -1,0 +1,8 @@
+query {
+  panel {
+    listOfMovies(limit: 4) {
+      title
+      playback
+    }
+  }
+}
