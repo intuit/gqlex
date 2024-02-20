@@ -1,0 +1,30 @@
+query Hero($episode: Episode, $withFriends: Boolean!) {
+  hero(episode: $episode) {
+    name
+    friends @include(if: $withFriends) {
+      name
+    }
+    friends @include(if: $withFriends) {
+      name
+    }
+    y {
+      z {
+        x {
+          a {
+            friends @include(if: $withFriends) {
+              name
+            }
+          }
+        }
+      }
+    }
+    friends @include(if: $withFriends) {
+      name
+    }
+
+
+  friends @include(if: $withFriends) {
+        name
+      }
+      }
+}

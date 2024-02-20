@@ -1,0 +1,1 @@
+{"__operations":{"GetPostsContainingString":{"__content":{"@depends":{"__arguments":{"__elem_1":{"on":"GetLoggedInUserName"}}}},"__operationType":"QUERY","posts":{"id":null,"title":null,"__arg<<filter>>":{"search":"$search"}}}}}

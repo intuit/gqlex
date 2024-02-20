@@ -1,0 +1,7 @@
+mutation createCompany( $sourceCode: String!) {
+  createCompany_CompanySetupInfo(input: {name : "sourceCode", value : $pppp, key : "kuku"}) {
+    aaaaa
+  }
+}
+
+

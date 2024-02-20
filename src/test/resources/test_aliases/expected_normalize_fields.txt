@@ -1,0 +1,2 @@
+QUERY.VOID.empireHero:hero.name
+QUERY.VOID.jediHero:hero.name

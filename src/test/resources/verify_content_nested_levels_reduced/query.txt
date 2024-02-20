@@ -1,0 +1,15 @@
+mutation M {
+  xxxxxxx(
+    input: {
+      a_parent: {
+        x: "1"
+        f_sibling: "2"
+}
+
+
+      }
+
+  ) {
+    aaaa
+  }
+}

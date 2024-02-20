@@ -1,0 +1,1 @@
+{"__operations":{"VOID":{"__operationType":"QUERY","jediHero:hero":{"__arg<<episode>>":{"__enum":"JEDI"},"name":null},"empireHero:hero":{"__arg<<episode>>":{"__enum":"EMPIRE"},"name":null}}}}

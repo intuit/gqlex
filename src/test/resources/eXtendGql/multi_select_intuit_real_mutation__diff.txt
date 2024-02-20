@@ -1,0 +1,124 @@
+mutation createCompany {
+  createCompany_CompanySetupInfo(
+    input: {
+      clientMutationId: "1"
+      companyCompanySetupInfo: {
+        profile: {
+          localization: { country: "US" }
+          companyName: "Rcc Paid company"
+          contactMethods: [
+            {
+              addresses: [
+                {
+                  addressComponents: [
+                    { name: "CITY", value: "New York" }
+                    { name: "cityOrLocality", value: "New York" }
+                    { name: "STATE", value: "NY" }
+                    { name: "stateOrProvince", value: "NY" }
+                    { name: "ZIP", value: "10038" }
+                    { name: "zipcode", value: "10038" }
+                    { name: "ADDRESS_LINE_1", value: "2491 Turkey Pen Road" }
+                    { name: "address1", value: "2491 Turkey Pen Road" }
+                    { name: "COUNTRY", value: "US" }
+                    { name: "country", value: "US" }
+                  ]
+                }
+              ]
+              emails: [{ emailAddress: "rcctestemail@gmail.com" }]
+            }
+          ]
+          industryType: "ALL_OTHER_MISCELLANEOUS_SERVICES"
+        }
+        companyProfile: {}
+        subscriptionSetup: {
+          paymentInfo: {
+            paymentMethod: { type: CreditCard }
+            creditCardInfo: {
+              name: "test"
+              cardType: "VISA"
+              number: "9732547836012241"
+              expMonth: "10"
+              expYear: "2029"
+              cvv: "9a2009b9-92d7-4a9a-8ea3-f5e03057861e"
+              address: {
+                addressComponents: [
+                  { name: "CITY", value: "New York" }
+                  { name: "cityOrLocality", value: "New York" }
+                  { name: "STATE", value: "NY" }
+                  { name: "stateOrProvince", value: "NY" }
+                  { name: "ZIP", value: "10038" }
+                  { name: "zipcode", value: "10038" }
+                  { name: "ADDRESS_LINE_1", value: "2491 Turkey Pen Road" }
+                  { name: "address1", value: "2491 Turkey Pen Road" }
+                  { name: "COUNTRY", value: "US" }
+                  { name: "country", value: "US" }
+                ]
+              }
+            }
+          }
+          offer: { offerId: "20015738", country: "US" }
+          locale: ""
+          region: "US"
+          companyType: ""
+          createSubscriptionAppData: { billingCode: "OBI-LL3", sourceCode: "" }
+        }
+        privacyPreference: { doNotEmail: false }
+        marketingTags: [
+          {
+            name: "sourceCode"
+            value: "cid:ppc_G_e_CA_.QBO_CA_B_Quickbooks_Products_Exact_T1_G_S_FY19._quickbooks online easystart_txt|sc:|ext:|int:INT||isQBSE"
+          }
+          {
+            name: "semCookie"
+            value: "cid:ppc_G_e_CA_.QBO_CA_B_Quickbooks_Products_Exact_T1_G_S_FY19._quickbooks online easystart_txt|sc:|ext:|int:INT|"
+          }
+        ]
+      }
+    }
+  ) {
+    clientMutationId
+    companyCompanySetupInfo {
+      id
+      companyProfile {
+        companyName
+        region
+        partner
+        industryType
+        language
+        contactMethods {
+          emails {
+            emailAddress
+          }
+        }
+      }
+      subscriptionSetup {
+        offer {
+          offerId
+        }
+        createSubscriptionAppData {
+          billingCode
+          sourceCode
+        }
+      }
+      privacyPreference {
+        doNotEmail
+        doNotPhone
+      }
+
+      f{
+      companyProfile {
+              companyName
+              region
+              partner
+              industryType
+              language
+              contactMethods {
+                emails {
+                  emailAddress
+                }
+              }
+            }
+            }
+    }
+  }
+}

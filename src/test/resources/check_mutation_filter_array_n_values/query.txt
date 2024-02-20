@@ -1,0 +1,15 @@
+mutation M {
+  xxxxxxx(
+    input: {
+
+      ccc: {
+
+              ddd: [
+
+              ]
+            }
+    }
+  ) {
+    aaaa
+  }
+}

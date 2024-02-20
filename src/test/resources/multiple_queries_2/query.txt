@@ -1,0 +1,4 @@
+query One {
+   id
+   name
+}

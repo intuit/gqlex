@@ -1,0 +1,1 @@
+{"__operations":{"Hero":{"variables":{"__elem_2":{"$withFriends":{"type":"Boolean"}},"__elem_1":{"$episode":{"type":"Episode"}}},"__operationType":"QUERY","hero":{"__arg<<episode>>":"$episode","name":null,"friends":{"__directs":{"__content":{"name":null},"@include":{"__arguments":{"__elem_1":{"if":"$withFriends"}}}}}}}}}

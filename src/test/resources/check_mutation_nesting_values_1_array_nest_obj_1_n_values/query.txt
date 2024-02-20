@@ -1,0 +1,20 @@
+mutation M {
+  xxxxxxx(
+    input: {
+      a_parent: {
+        x: "1"
+        y: "3"
+        f_sibling: [
+                  { name: "f_sibling_1", value: "2" }
+                  { name: "f_sibling_2", value: "" }
+                  { b3: "f_sibling_3", value: "v1" }
+                ]
+}
+      }
+
+  ) {
+    aaaa
+    bbb
+    cc
+  }
+}

@@ -1,0 +1,9 @@
+mutation createCompany {
+  updateTransactions_TransactionLine(
+    input: {
+      account: { id: "djQuMToxMzUzNTI1MTY1OjUxY2VkODUzNmM:79" }
+    }
+  ) {
+    clientMutationId
+  }
+}

@@ -1,0 +1,1 @@
+{"__operations":{"VOID":{"GetLoggedInUserName":{"me":{"name":{"__directs":{"@export":{"__arguments":{"__elem_1":{"as":"search"}}}}}}},"GetPostsContainingString":{"__directs":{"__content":{"posts":{"id":null,"title":null,"__arg<<filter>>":{"search":"$search"}}},"@depends":{"__arguments":{"__elem_1":{"on":"GetLoggedInUserName"}}}}},"__operationType":"QUERY"}}}

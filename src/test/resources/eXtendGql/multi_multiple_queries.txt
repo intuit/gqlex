@@ -1,0 +1,14 @@
+{
+    query GetLoggedInUserName {
+      me {
+        name @export(as: "search")
+      }
+    }
+
+    query GetPostsContainingString @depends(on: "GetLoggedInUserName") {
+      posts(filter: { search: $search }) {
+        id
+        title
+      }
+    }
+}

@@ -1,0 +1,1 @@
+{"Operations":[{"name":"VOID","__operationType":"QUERY","fields":[{"name":"VOID","childs":[{"name":"Instrument","childs":[{"name":"Reference","childs":[{"name":"Name"},{"name":"title"}]}]}]}]}]}

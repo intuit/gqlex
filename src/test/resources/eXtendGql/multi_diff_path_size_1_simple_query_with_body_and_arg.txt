@@ -1,0 +1,14 @@
+query {
+  Instrument(id: "1234") {
+    Reference {
+      Name
+      title
+    }
+    a{
+    Reference {
+      Name
+      title
+    }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+query {
+  Instrument {
+      sell{
+        a
+        b
+        c
+      }
+      book{
+        a
+        b
+        c
+      }
+      book{
+        a
+        b
+        g
+      }
+  }
+}

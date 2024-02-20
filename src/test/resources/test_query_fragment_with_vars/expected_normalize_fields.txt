@@ -1,0 +1,6 @@
+QUERY.HeroComparison.leftComparison:hero.name
+QUERY.HeroComparison.leftComparison:hero.friendsConnection.totalCount
+QUERY.HeroComparison.leftComparison:hero.friendsConnection.edges.node.name
+QUERY.HeroComparison.rightComparison:hero.name
+QUERY.HeroComparison.rightComparison:hero.friendsConnection.totalCount
+QUERY.HeroComparison.rightComparison:hero.friendsConnection.edges.node.name
