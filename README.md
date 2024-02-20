@@ -1,10 +1,7 @@
+# eXtendGql
 
-# TL.DR.
+## Summary
 eXtendGql is a powerful library that offers a unique xPath solution for GraphQL, called gXPath. With this feature, developers can easily navigate the GraphQL data structure and select the information they need. In addition, the library includes an advanced transformation tool that allows for complex data manipulation and conversion. 
-
-For more info, keep reading L.R
-
-# L. R.   (long, read) 
 
 ## Introduction
 
