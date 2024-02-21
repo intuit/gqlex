@@ -61,6 +61,15 @@ The team that owns this repo is expected to practice the following:
 1. Push your changes to your fork's branch. Use `git rebase` (not `git merge`) to sync your work from time to time.
 
    ```sh
+   git tag <tagname> -a
+   ``` 
+   please use tagname correlated with the POM artifact version and lean on [Semantic Versioning 2.0.0](https://semver.org/)
+
+   ```sh
+   git push origin --tags
+   ```
+   
+   ```sh
    git fetch upstream 
    git rebase upstream/master
    git push origin name-of-your-branch
