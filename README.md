@@ -54,7 +54,7 @@ POM file
 </dependency>
 ```
 
-##Traverse over GraphQL document
+## Traverse over GraphQL document
 
 Every element in GraphQL, such as document, query, mutation, fragment, inline fragment, directive, etc., is derived from a node with unique attributes and behavior.
 
@@ -62,7 +62,7 @@ eXtendGql uses the [observer pattern](https://en.wikipedia.org/wiki/Observer_pat
 
 This observer pattern separates the traversal over the GraphQL document from the execution part that the observer consumer code would like to perform.
 
-##Selection of Node
+## Selection of Node
 
 XML has [XPath](https://en.wikipedia.org/wiki/XPath).
 JSON has [JSONPath](https://github.com/json-path/JsonPath).
@@ -75,7 +75,7 @@ gXPath uses path expressions to select nodes or node on the GraphQL document.
 _Behind the scenes, the gXPath utilizes the traversal module 
 and selects the node according to the required expression._
 
-###gXPath syntax
+### gXPath syntax
 gXPath uses path expressions to select nodes in GraphQL document. The node is selected by following a path or steps. 
 
 The most useful path expressions are listed below:
