@@ -35,7 +35,8 @@ The article will,
 - Play with code
 - Elaborate on use cases
 
-##eXtendGql
+## eXtendGql
+
 **eXtendGql** is a Java-based library.
 
 In order to use the library, you should mvn clean install, 
