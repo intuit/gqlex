@@ -1,13 +1,14 @@
-# What is gXPath?
-gXPath is the major part in **GraphQl** selection flow.
-gXPath can be used to navigate through elements in **GraphQl** with the assist of eXtendGql Browser
+# What is gqlXPath?
+A unique path selection solution for GraphQL document.
+
+gqlXPath can be used to navigate through elements in **GraphQl** with the assist of eXtendGql Browser
 for specific **GraphQl** node.
 
-## gXPath
+## gqlXPath
 
-gXPath stands for Gql Extended Path expression Language
-gXPath uses "path like" syntax to identify and navigate nodes in an **GraphQl** document
-gXPath have the ability to navigate node in:
+gqlXPath stands for Gql Extended Path expression Language
+gqlXPath uses "path like" syntax to identify and navigate nodes in an **GraphQl** document
+gqlXPath have the ability to navigate node in:
 1. Query
 2. Mutation
 3. Fragments
@@ -16,15 +17,15 @@ gXPath have the ability to navigate node in:
 6. Directives
 7. Variables Reference
 
-The gXPath language is similar to other path language e.g. xpath for xml, while gXPath
+The gqlXPath language is similar to other path language e.g. xpath for xml, while gqlXPath
 provide unique way to navigate through **GraphQl** nodes.
 
-## gXPath Syntax
+## gqlXPath Syntax
 
 ### Selecting Node
 > Currently support of selecting only one node only
 
-gXPath uses path expressions to select node in an **GraphQl** document.
+gqlXPath uses path expressions to select node in an **GraphQl** document.
 The node is selected by following a path or steps.
 Path expressions are listed below:
 
@@ -36,7 +37,7 @@ Path expressions are listed below:
 | {:y}//  | Path prefix, Select path node(s), between range of first path node result to y, use of slash as a separator between path elements. x and y are positive integers. if no x and y are not set, all nodes are being selected.                                                                                                          |
 | {x:}/   | Path prefix, Select path node(a), between range of x path node result to the end of path nodes result, use of slash as a separator between path elements. x and y are integers. if no x and y are not set, select all path nodes.                                                                                                   |
 | {:}//   | Path prefix, Select node(s) from the root node, use of slash as a separator between path elements.                                                                                                                                                                                                                                  | |
-| ... | Support of relative path **"any"** selection e.g. {x:y}//a/b/.../f <br>  **any** can be set anywhere in the  gXPath, except at the end of the gXPath, You can set many **any** as you request, this will help you while selecting node in large GraphQL structure, so you wont required to mention/build the entire node structure. |
+| ... | Support of relative path **"any"** selection e.g. {x:y}//a/b/.../f <br>  **any** can be set anywhere in the  gqlXPath, except at the end of the gqlXPath, You can set many **any** as you request, this will help you while selecting node in large GraphQL structure, so you wont required to mention/build the entire node structure. |
 
 Path expression elements:
 
@@ -73,7 +74,7 @@ query {
 }
 ```
 
-| gXPath Example | Description                                                        |
+| gqlXPath Example | Description                                                        |
 |------------------|-------------------------------------------------------------------------|
 | ֿֿ//query/Instrument/name[type=arg] | select of node name which is argument                  |
 | //query/Instrument/Reference/name | select of name node which is field under               |
@@ -101,7 +102,7 @@ query Hero($episode: Episode, $withFriends: Boolean!) {
 ```
 
 
-| gXPath Example                                                  | Description                                                                                                     |
+| gqlXPath Example                                                  | Description                                                                                                     |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | //query[name=hero]                                              | select all query nodes named hero                                                                               |
 | /query[name=hero]                                               | select all query node named hero                                                                                |
@@ -136,7 +137,7 @@ query HeroForEpisode($ep: Episode!) {
 ```
 
 
-| gXPath Example | Description                                      |
+| gqlXPath Example | Description                                      |
 |------------------|--------------------------------------------------|
 |//query[name=HeroForEpisode]/hero/Droid[type=infrag]| select droid inline fragment node                |
 
@@ -168,7 +169,7 @@ fragment comparisonFields on Character {
 ```
 
 
-| gXPath Example | Description                                                          |
+| gqlXPath Example | Description                                                          |
 |------------------|----------------------------------------------------------------------|
 |//comparisonFields[type=frag]/friendsConnection/totalCount| select totalCount node under comparisonFields fragment               |
 |//comparisonFields[type=frag]/name| select name node under comparisonFields fragment                     |
@@ -185,7 +186,7 @@ mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
 }
 ```
 
-| gXPath Example | Description                                                            |
+| gqlXPath Example | Description                                                            |
 |------------------|------------------------------------------------------------------------|
 |//mutation[name=CreateReviewForEpisode]| select mutation node                                                   |
 |//mutation[name=CreateReviewForEpisode]/createReview| select createReview node under mutation named CreateReviewForEpisode   |
@@ -306,16 +307,16 @@ mutation createCompany {
 }
 ```
 
-| gXPath Example | Description                                                |
+| gqlXPath Example | Description                                                |
 |------------------|------------------------------------------------------------|
 |//mutation[name=createCompany]/createCompany_CompanySetupInfo/input[type=arg]| select input argument node 'input: {clientMutationId: "1"' |                                                  
 |/mutation[name=createCompany]/companyCompanySetupInfo/companyProfile| select companyProfile node                                 |
 
 
 
-# How to use gXPath in code
+# How to use gqlXPath in code
 
-gXPath has 2 representation options:
+gqlXPath has 2 representation options:
 1. Text, string represent the path e.g. //query[name=hero]/a/b/c<br> use of textual selection commonly will occure once the developer know before runtime which node he should select, so the developer can specifiy the exact node path.
 2. SyntaxPath, A SyntaxPath is a class that contains a list of SyntaxPathElements. 
 <br>Each SyntaxPathElement describes the behavior of a relevant path element and is <br>
