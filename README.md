@@ -1,7 +1,7 @@
 # eXtendGql
 
 ## Summary
-eXtendGql is a powerful library that offers a unique path selection solution for GraphQL, called gXPath. With this feature, developers can easily navigate the GraphQL data structure and select the information they need. In addition, the library includes an advanced transformation tool that allows for complex data manipulation and conversion. 
+eXtendGql is a powerful library that offers a unique path selection solution for GraphQL, called gqlXPath. With this feature, developers can easily navigate the GraphQL data structure and select the information they need. In addition, the library includes an advanced transformation tool that allows for complex data manipulation and conversion. 
 
 ## Introduction
 
@@ -68,16 +68,16 @@ This observer pattern separates the traversal over the GraphQL document from the
 XML has [XPath](https://en.wikipedia.org/wiki/XPath).
 JSON has [JSONPath](https://github.com/json-path/JsonPath).
 
-> And ... **GraphQL document has gXPath.**
+> And ... **GraphQL document has gqlXPath.**
 
-gXPath can be used to navigate through nodes in a GraphQL document.
-gXPath uses path expressions to select nodes or node on the GraphQL document.
+gqlXPath can be used to navigate through nodes in a GraphQL document.
+gqlXPath uses path expressions to select nodes or node on the GraphQL document.
 
-_Behind the scenes, the gXPath utilizes the traversal module 
+_Behind the scenes, the gqlXPath utilizes the traversal module 
 and selects the node according to the required expression._
 
-### gXPath syntax
-gXPath uses path expressions to select nodes in GraphQL document. The node is selected by following a path or steps. 
+### gqlXPath syntax
+gqlXPath uses path expressions to select nodes in GraphQL document. The node is selected by following a path or steps. 
 
 The most useful path expressions are listed below:
 
@@ -89,13 +89,13 @@ The most useful path expressions are listed below:
 | {:y}//  | Path prefix, Select path node(s), between a range of first path node result to y, using a slash as a separator between path elements. x and y are positive integers. All nodes are selected if no x and y are not set.                                                                                                          |
 | {x:}/   | Path prefix, Select path node(a), between range of x path node result to the end of path nodes result, use slash as a separator between path elements. x and y are integers. if no x and y are not set, select all path nodes.                                                                                                   |
 | {:}//   | Path prefix, Select node(s) from the root node, use of slash as a separator between path elements.                                                                                                                                                                                                                                  | |
-| ... | Support of relative path **"any"** selection e.g. {x:y}//a/b/.../f <br>  **any** can be set anywhere in the gXPath, except at the end of the gXPath, You can set many **any** as you request, this will help you while selecting node in large GraphQL structure, so you won't be required to mention/build the entire node structure. |
+| ... | Support of relative path **"any"** selection e.g. {x:y}//a/b/.../f <br>  **any** can be set anywhere in the gqlXPath, except at the end of the gqlXPath, You can set many **any** as you request, this will help you while selecting node in large GraphQL structure, so you won't be required to mention/build the entire node structure. |
 
-The library also provides an equivalent code named SyntaxPath that provides gXPath expression abilities use of code, mainly used by automation code.
+The library also provides an equivalent code named SyntaxPath that provides gqlXPath expression abilities use of code, mainly used by automation code.
 
 ##Transformer
 The transformer provides the ability to transform (Manipulate) **GraphQL** document simply.
-The transformer uses the abilities provided by eXtendGql such as: gXPath, SyntaxPath etc.
+The transformer uses the abilities provided by eXtendGql such as: gqlXPath, SyntaxPath etc.
 
 The eXtendGql provides the following transform methods:
 1. Add Children - Add children node to selected **GraphQL** node or nodes
@@ -254,11 +254,11 @@ System.out.println( gqlStringBuilderObserver.getGqlBrowsedString());
 ```
 
 
-After we saw how the traversal is working, lets digg with some example of **gXPath selection GraphQL nodes**
+After we saw how the traversal is working, lets digg with some example of **gqlXPath selection GraphQL nodes**
 
-gXPath define an expression language as defined above, in addition the expression language contains more terms to familiar with, _Element Name_ and types _abbreviations_.
+gqlXPath define an expression language as defined above, in addition the expression language contains more terms to familiar with, _Element Name_ and types _abbreviations_.
 Why its important, GraphQL document is more than structure that similar to JSON, GraphQL also provide a DSL that exposed by the GraphQL server and GraphQL language.
-the types and the element name will assist the gXPath to select the exact node or nodes.
+the types and the element name will assist the gqlXPath to select the exact node or nodes.
 
 <u>Element Names</u>
 
@@ -284,7 +284,7 @@ the types and the element name will assist the gXPath to select the exact node o
 | arg             | ARGUMENT             | 
 
 
-> Let's practice the gXPath expression,
+> Let's practice the gqlXPath expression,
 
 __GraphQL Document__
 
@@ -354,7 +354,7 @@ query Hero($episode: Episode, $withFriends: Boolean!) {
 - Select episode variable `//.../episode[type=var]`                                         
 
 
-How to use gXPath in the code:
+How to use gqlXPath in the code:
 
 ```java
 
@@ -382,7 +382,7 @@ GqlNodeContext select = selectorFacade.select(queryString, eXtendGqlBuilder.buil
 ```
 
 
-And finally we will dwell on an example that will illustrate the use of gXPath node selection GraphQL manipulation (AKA transform).
+And finally we will dwell on an example that will illustrate the use of gqlXPath node selection GraphQL manipulation (AKA transform).
 
 > Here a mutation GraphQL document
 
@@ -420,26 +420,26 @@ RawPayload executeRawPayload = transformExecutor.execute(rawPayload);
 > **Description**:
 
 > 
-<u>add new children node</u> named: _child_of_stars_ under gXPath: `//mutation[name=CreateReviewForEpisode]/createReview/stars`
+<u>add new children node</u> named: _child_of_stars_ under gqlXPath: `//mutation[name=CreateReviewForEpisode]/createReview/stars`
 
 > 
-<u>Add new sibling node</u> named: _sibling_of_stars_ under gXPath selected node: `//mutation[name=CreateReviewForEpisode]/createReview/stars`
+<u>Add new sibling node</u> named: _sibling_of_stars_ under gqlXPath selected node: `//mutation[name=CreateReviewForEpisode]/createReview/stars`
 
 > 
-<u>Set new node name</u>: _star_new_name_ value to the selected node by gXPath: 
+<u>Set new node name</u>: _star_new_name_ value to the selected node by gqlXPath: 
 
 `//mutation[name=CreateReviewForEpisode]/createReview/stars`
  
 
 > 
-<u>Remove selected node by gXPath</u> `//mutation[name=CreateReviewForEpisode]/createReview/commentary`
+<u>Remove selected node by gqlXPath</u> `//mutation[name=CreateReviewForEpisode]/createReview/commentary`
 
 
 > 
-<u>Duplicate selected gXPath node 10 times</u> `//mutation[name=CreateReviewForEpisode]/createReview/sibling_of_stars`
+<u>Duplicate selected gqlXPath node 10 times</u> `//mutation[name=CreateReviewForEpisode]/createReview/sibling_of_stars`
 
 
-Use TransformBuilder to build the transform plan, with selected node use of gXPath and the command to execute.
+Use TransformBuilder to build the transform plan, with selected node use of gqlXPath and the command to execute.
 The transform plan is load to the TransformExecutor, with the GraphQL payload.
 
 The execution will result in a new GraphQL document,
@@ -533,20 +533,20 @@ Testing, mostly integration testing part will demands the ability to query Graph
 
 Of course, the developer can maintain large list of example files to send to the server or to find and replace the relevant string in GraphQL document, but it is a cumbersome solution, hard to maintain etc.
 
-The ability to manipulate the query or the mutation with ease way, use configuration that enlist the plan [gXPath, Transform Commands and Argument to execute] and execute the planץ
+The ability to manipulate the query or the mutation with ease way, use configuration that enlist the plan [gqlXPath, Transform Commands and Argument to execute] and execute the planץ
 
 ```
 Configuration
   Plan
     steps
       step 1
-         gXPath (String)
+         gqlXPath (String)
          transform_commands
            transform_command
                command
                argument_object_definition
       step n
-         gXPath (String)
+         gqlXPath (String)
          transform_commands
            transform_command
                command
@@ -568,7 +568,7 @@ Versatility and an extremely high ability to produce synthetic GraphQL data and 
 Sometime you required to build query or mutation upon configuration on the fly or upon business logic, and send it to the GraphQL server, The **eXtendGql** library will assist you while doing it, The **eXtendGql** library does not support creation (only manipulation) of the skeleton file and will not support (as for now).
 The developer can create the skeleton GraphQL file, store the file in resource folder.
 _skeleton file, means file with structure but without field only._
-And with relevant plan use of syntaxPath we can assemble the gXpath and set the plan strategy on the fly, use of TransformBuilder.
+And with relevant plan use of syntaxPath we can assemble the gqlXPath and set the plan strategy on the fly, use of TransformBuilder.
 And then use of TransformExecutor to run the plan.
 
 
