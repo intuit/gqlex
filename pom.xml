@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java</artifactId>
-            <version>20.4</version>
+            <version>20.7</version>
         </dependency>
 
         <dependency>
