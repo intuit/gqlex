@@ -203,7 +203,7 @@ mutation createCompany {
       companyCompanySetupInfo: {
         profile: {
           localization: { country: "US" }
-          companyName: "Rcc Paid company"
+          companyName: "2vdsfffff gfff"
           contactMethods: [
             {
               addresses: [
@@ -215,14 +215,14 @@ mutation createCompany {
                     { name: "stateOrProvince", value: "NY" }
                     { name: "ZIP", value: "10038" }
                     { name: "zipcode", value: "10038" }
-                    { name: "ADDRESS_LINE_1", value: "2491 Turkey Pen Road" }
-                    { name: "address1", value: "2491 Turkey Pen Road" }
+                    { name: "ADDRESS_LINE_1", value: "62363246723" }
+                    { name: "address1", value: "bsbdsfhs5 6564" }
                     { name: "COUNTRY", value: "US" }
                     { name: "country", value: "US" }
                   ]
                 }
               ]
-              emails: [{ emailAddress: "rcctestemail@gmail.com" }]
+              emails: [{ emailAddress: "4523623644@gmail.com" }]
             }
           ]
           industryType: "ALL_OTHER_MISCELLANEOUS_SERVICES"
@@ -234,10 +234,10 @@ mutation createCompany {
             creditCardInfo: {
               name: "test"
               cardType: "VISA"
-              number: "9732547836012241"
+              number: "23634632476224"
               expMonth: "10"
-              expYear: "2029"
-              cvv: "9a2009b9-92d7-4a9a-8ea3-f5e03057861e"
+              expYear: "2030"
+              cvv: "gsdgsdfgdfghdsghdsfhsdfh"
               address: {
                 addressComponents: [
                   { name: "CITY", value: "New York" }
@@ -246,29 +246,29 @@ mutation createCompany {
                   { name: "stateOrProvince", value: "NY" }
                   { name: "ZIP", value: "10038" }
                   { name: "zipcode", value: "10038" }
-                  { name: "ADDRESS_LINE_1", value: "2491 Turkey Pen Road" }
-                  { name: "address1", value: "2491 Turkey Pen Road" }
+                  { name: "ADDRESS_LINE_1", value: "4643 ggdf fgdfsg ds" }
+                  { name: "address1", value: "42662 fgsgsdgsdg" }
                   { name: "COUNTRY", value: "US" }
                   { name: "country", value: "US" }
                 ]
               }
             }
           }
-          offer: { offerId: "20015738", country: "US" }
+          offer: { offerId: "4535356365", country: "US" }
           locale: ""
           region: "US"
           companyType: ""
-          createSubscriptionAppData: { billingCode: "OBI-LL3", sourceCode: "" }
+          createSubscriptionAppData: { billingCode: "ffgrgr", sourceCode: "" }
         }
         privacyPreference: { doNotEmail: false }
         marketingTags: [
           {
             name: "sourceCode"
-            value: "cid:ppc_G_e_CA_.QBO_CA_B_Quickbooks_Products_Exact_T1_G_S_FY19._quickbooks online easystart_txt|sc:|ext:|int:INT||isQBSE"
+            value: "dsfgsdfgdshsdhfshdfsh"
           }
           {
             name: "semCookie"
-            value: "cid:ppc_G_e_CA_.QBO_CA_B_Quickbooks_Products_Exact_T1_G_S_FY19._quickbooks online easystart_txt|sc:|ext:|int:INT|"
+            value: "gsdgdsfhsdfhds"
           }
         ]
       }
