@@ -2,16 +2,16 @@
 
 ## v2.0
 
-eXtendedGql Library 2.0 release. 
+gqlex Library 2.0 release. 
 
 ### Features
 #### Support for GrapqhGL traversal
 Traverse over graphql document, use of observerable pattern to be notified on GraphQL traversal progress.
 for more details, please read:
 [Traverse on GraphQL document in details](src/main/java/com/intuit/gqlex/traversal/readme.md)
-#### Support for eXtendedGqlPath
+#### Support for gqlXPath
 Support the ability to select specific nodes in the GraphQL document using a path expression, for more details, please read: 
-[eXtendedGqlPath in details](src/main/java/com/intuit/gqlex/gxpath/readme.md)
+[gqlXPath in details](src/main/java/com/intuit/gqlex/gxpath/readme.md)
 #### Support of transformation of GraphQL document
 Ability to execute transformation commands over GraphQL document
 for more details, please read:
