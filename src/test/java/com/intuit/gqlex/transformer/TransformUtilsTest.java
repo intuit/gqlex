@@ -4,7 +4,7 @@ import com.intuit.gqlex.common.GqlNode;
 import com.intuit.gqlex.common.GqlNodeContext;
 import com.intuit.gqlex.common.DocumentElementType;
 import com.intuit.gqlex.common.eXtendGqlWriter;
-import com.intuit.gqlex.gxpath.selector.SelectorFacade;
+import com.intuit.gqlex.gqlxpath.selector.SelectorFacade;
 import graphql.language.*;
 import org.junit.jupiter.api.Test;
 

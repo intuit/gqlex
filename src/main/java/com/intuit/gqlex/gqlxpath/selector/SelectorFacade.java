@@ -1,7 +1,7 @@
-package com.intuit.gqlex.gxpath.selector;
+package com.intuit.gqlex.gqlxpath.selector;
 
 import com.intuit.gqlex.common.GqlNodeContext;
-import com.intuit.gqlex.gxpath.syntax.SyntaxPath;
+import com.intuit.gqlex.gqlxpath.syntax.SyntaxPath;
 import com.intuit.gqlex.traversal.GqlTraversal;
 import graphql.com.google.common.base.Preconditions;
 import graphql.com.google.common.base.Strings;

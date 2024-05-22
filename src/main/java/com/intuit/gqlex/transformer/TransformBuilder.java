@@ -1,6 +1,6 @@
 package com.intuit.gqlex.transformer;
 
-import com.intuit.gqlex.gxpath.syntax.SyntaxBuilder;
+import com.intuit.gqlex.gqlxpath.syntax.SyntaxBuilder;
 import graphql.com.google.common.base.Preconditions;
 import graphql.com.google.common.base.Strings;
 import graphql.language.*;

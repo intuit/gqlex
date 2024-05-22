@@ -1,8 +1,8 @@
-package com.intuit.gqlex.gxpath.syntax;
+package com.intuit.gqlex.gqlxpath.syntax;
 
 import com.intuit.gqlex.common.DocumentElementType;
-import com.intuit.gqlex.gxpath.selector.GqlSelectionSyntaxException;
-import com.intuit.gqlex.gxpath.selector.SelectionRange;
+import com.intuit.gqlex.gqlxpath.selector.GqlSelectionSyntaxException;
+import com.intuit.gqlex.gqlxpath.selector.SelectionRange;
 import graphql.com.google.common.base.Preconditions;
 import graphql.com.google.common.base.Strings;
 import graphql.com.google.common.collect.ImmutableList;

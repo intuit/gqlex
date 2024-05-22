@@ -3,7 +3,7 @@ package com.intuit.gqlex.transformer;
 import com.intuit.gqlex.common.DocumentElementType;
 import com.intuit.gqlex.common.GqlNodeContext;
 import com.intuit.gqlex.common.RawPayload;
-import com.intuit.gqlex.gxpath.selector.SelectorFacade;
+import com.intuit.gqlex.gqlxpath.selector.SelectorFacade;
 import graphql.language.Field;
 import graphql.language.InlineFragment;
 import graphql.language.TypeName;

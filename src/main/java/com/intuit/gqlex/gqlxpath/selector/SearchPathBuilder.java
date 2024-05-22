@@ -1,8 +1,8 @@
-package com.intuit.gqlex.gxpath.selector;
+package com.intuit.gqlex.gqlxpath.selector;
 
 import com.intuit.gqlex.common.DocumentElementType;
 import com.intuit.gqlex.TuneableSearchData;
-import com.intuit.gqlex.gxpath.syntax.SyntaxPath;
+import com.intuit.gqlex.gqlxpath.syntax.SyntaxPath;
 import graphql.com.google.common.base.Preconditions;
 import graphql.com.google.common.base.Strings;
 
