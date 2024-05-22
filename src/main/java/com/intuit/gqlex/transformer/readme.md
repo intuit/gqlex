@@ -1,8 +1,8 @@
 # What is Transformer?
 The transformer provide the ability to transform **GraphQL** document, in a simple manner.
-<br>The transformer use of the abilities provided by eXtendGql such as: gXPath, SyntaxPath etc.
+<br>The transformer use of the abilities provided by gqlex such as: gXPath, SyntaxPath etc.
 
-The following transform methods provided by the eXtendGql:
+The following transform methods provided by the gqlex:
 1. Add Children - Add children node to selected **GraphQL** node or nodes
 2. Add Sibling - Add sibling node to selected **GraphQL** node or nodes
 3. Duplicate - Duplicate selected node by duplication number, multi nodes cannot be duplicated
