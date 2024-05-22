@@ -1,7 +1,7 @@
 # What is gqlXPath?
 A unique path selection solution for GraphQL document.
 
-gqlXPath can be used to navigate through elements in **GraphQl** with the assist of eXtendGql Browser
+gqlXPath can be used to navigate through elements in **GraphQl** with the assist of gqlx Browser
 for specific **GraphQl** node.
 
 ## gqlXPath
@@ -341,14 +341,14 @@ __Use of SyntaxPath__
 ```java
 String queryString = Files.readString(file.toPath());
 
-SyntaxBuilder eXtendGqlBuilder = new SyntaxBuilder();
+SyntaxBuilder gqlxBuilder = new SyntaxBuilder();
 
-eXtendGqlBuilder.appendQuery();
-eXtendGqlBuilder.appendField("Instrument");
-eXtendGqlBuilder.appendField("Reference");
+gqlxBuilder.appendQuery();
+gqlxBuilder.appendField("Instrument");
+gqlxBuilder.appendField("Reference");
 
 // query {  Instrument(id: "1234") }
-GqlNodeContext select = selectorFacade.select(queryString, eXtendGqlBuilder.build());
+GqlNodeContext select = selectorFacade.select(queryString, gqlxBuilder.build());
 ```
 
 
