@@ -1,4 +1,4 @@
-package com.intuit.gqlex.gxpath.syntax;
+package com.intuit.gqlex.gqlxpath.syntax;
 
 import org.junit.jupiter.api.Test;
 

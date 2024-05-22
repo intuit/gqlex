@@ -1,7 +1,7 @@
-package com.intuit.gqlex.gxpath.syntax;
+package com.intuit.gqlex.gqlxpath.syntax;
 
 import com.intuit.gqlex.common.DocumentElementType;
-import com.intuit.gqlex.gxpath.selector.GqlSelectionSyntaxException;
+import com.intuit.gqlex.gqlxpath.selector.GqlSelectionSyntaxException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

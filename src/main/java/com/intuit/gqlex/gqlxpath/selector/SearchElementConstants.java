@@ -1,4 +1,4 @@
-package com.intuit.gqlex.gxpath.selector;
+package com.intuit.gqlex.gqlxpath.selector;
 
 public class SearchElementConstants {
     public static final String DOUBLE_SLASH = "//";
