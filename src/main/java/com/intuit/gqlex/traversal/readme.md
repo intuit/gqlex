@@ -1,4 +1,4 @@
-# eXtendGql Traversal 
+# Traversal 
 
 The package provides the ability to traverse on **GraphQL** document.
 The package uses an observable design pattern, which will give you the ability to control the traversing and to 
@@ -10,7 +10,7 @@ Provide for each visited element context with:
 - Parent **GraphQL**  Node
 - Level - the depth
 - Stack with all the precedence elements in the path of the current browsed entity.
-- Type - [DocumentElementType](../com/intuit/library/eXtendGql/DocumentElementType.java)
+- Type - [DocumentElementType](../com/intuit/gqlex/DocumentElementType.java)
 
 *TuneableSearchData*
 
