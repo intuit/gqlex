@@ -1,6 +1,6 @@
 package com.intuit.gqlex.common;
 
-import com.intuit.gqlex.gxpath.selector.SearchPathElement;
+import com.intuit.gqlex.gqlxpath.selector.SearchPathElement;
 
 import java.util.LinkedList;
 

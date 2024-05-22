@@ -1,7 +1,7 @@
-package com.intuit.gqlex.gxpath.syntax;
+package com.intuit.gqlex.gqlxpath.syntax;
 
 import com.intuit.gqlex.common.DocumentElementType;
-import com.intuit.gqlex.gxpath.selector.SearchElementConstants;
+import com.intuit.gqlex.gqlxpath.selector.SearchElementConstants;
 import graphql.com.google.common.base.Preconditions;
 import graphql.com.google.common.base.Strings;
 

@@ -1,6 +1,6 @@
 package com.intuit.gqlex.transformer;
 
-import com.intuit.gqlex.gxpath.syntax.SyntaxBuilder;
+import com.intuit.gqlex.gqlxpath.syntax.SyntaxBuilder;
 import graphql.language.Node;
 
 import java.util.Map;
