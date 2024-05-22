@@ -1,10 +1,10 @@
-package com.intuit.gqlex.gxpath.selector;
+package com.intuit.gqlex.gqlxpath.selector;
 
 import com.intuit.gqlex.common.DocumentElementType;
 import com.intuit.gqlex.common.GqlNodeContext;
 import com.intuit.gqlex.common.eXtendGqlWriter;
 import com.intuit.gqlex.transformer.TransformUtils;
-import com.intuit.gqlex.gxpath.syntax.SyntaxBuilder;
+import com.intuit.gqlex.gqlxpath.syntax.SyntaxBuilder;
 import graphql.language.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

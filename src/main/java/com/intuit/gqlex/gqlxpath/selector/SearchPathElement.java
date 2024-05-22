@@ -1,4 +1,4 @@
-package com.intuit.gqlex.gxpath.selector;
+package com.intuit.gqlex.gqlxpath.selector;
 
 import com.intuit.gqlex.common.DocumentElementType;
 import graphql.com.google.common.base.Preconditions;
