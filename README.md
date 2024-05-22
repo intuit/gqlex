@@ -1,7 +1,7 @@
-# eXtendGql
+# gqlex
 
 ## Summary
-eXtendGql is a powerful library that offers a unique path selection solution for GraphQL, called gqlXPath. With this feature, developers can easily navigate the GraphQL data structure and select the information they need. In addition, the library includes an advanced transformation tool that allows for complex data manipulation. 
+gqlex is a powerful library that offers a unique path selection solution for GraphQL, called gqlXPath. With this feature, developers can easily navigate the GraphQL data structure and select the information they need. In addition, the library includes an advanced transformation tool that allows for complex data manipulation. 
 
 ## Introduction
 
@@ -25,25 +25,25 @@ _Let's exclude point (5) from our discussion, as it can be accomplished through 
 
 I found no open-source solution that could traverse the GraphQL document, select the relevant nodes, and manipulate the GraphQL document.
 
-The article discusses the eXtendGql solution, which provides an intuitive solution for developers who need assistance with,
+The article discusses the gqlex solution, which provides an intuitive solution for developers who need assistance with,
 1. Traverse through the GraphQL document
 2. Select nodes in the GraphQL document
 3. Manipulate selected nodes in the GraphQL document
 
 The article will,
-- Describe the eXtendGql and abilities 
+- Describe the gqlex and abilities 
 - Play with code
 - Elaborate on use cases
 
-## eXtendGql
+## gqlex
 
-**eXtendGql** is a Java-based library.
+**gqlex** is a Java-based library.
 
 In order to use the library, you should mvn clean install, 
 
 _Soon, the artifact will be available via artifactory_
 
-eXtendGql leans on the [graphql-java](https://github.com/graphql-java/graphql-java) under MIT license, provide GraphQL java implementation, 
+gqlex leans on the [graphql-java](https://github.com/graphql-java/graphql-java) under MIT license, provide GraphQL java implementation, 
 
 POM file
 
@@ -59,7 +59,7 @@ POM file
 
 Every element in GraphQL, such as document, query, mutation, fragment, inline fragment, directive, etc., is derived from a node with unique attributes and behavior.
 
-eXtendGql uses the [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) pattern where the GraphQL document acts as a subject, traverses the entire document and notifies relevant observers on the node and context.
+gqlex uses the [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) pattern where the GraphQL document acts as a subject, traverses the entire document and notifies relevant observers on the node and context.
 
 This observer pattern separates the traversal over the GraphQL document from the execution part that the observer consumer code would like to perform.
 
@@ -95,9 +95,9 @@ The library also provides an equivalent code named SyntaxPath that provides gqlX
 
 ##Transformer
 The transformer provides the ability to transform (Manipulate) **GraphQL** document simply.
-The transformer uses the abilities provided by eXtendGql such as: gqlXPath, SyntaxPath etc.
+The transformer uses the abilities provided by gqlex such as: gqlXPath, SyntaxPath etc.
 
-The eXtendGql provides the following transform methods:
+The gqlex provides the following transform methods:
 1. Add Children - Add children node to selected **GraphQL** node or nodes
 2. Add Sibling - Add sibling node to selected **GraphQL** node or nodes
 3. Duplicate - Duplicate selected node by duplication number, multi nodes cannot be duplicated
@@ -371,14 +371,14 @@ __Use of SyntaxPath__
 ```java
 String queryString = Files.readString(file.toPath());
 
-SyntaxBuilder eXtendGqlBuilder = new SyntaxBuilder();
+SyntaxBuilder gqlexBuilder = new SyntaxBuilder();
 
-eXtendGqlBuilder.appendQuery();
-eXtendGqlBuilder.appendField("Instrument");
-eXtendGqlBuilder.appendField("Reference");
+gqlexBuilder.appendQuery();
+gqlexBuilder.appendField("Instrument");
+gqlexBuilder.appendField("Reference");
 
 // query {  Instrument(id: "1234") }
-GqlNodeContext select = selectorFacade.select(queryString, eXtendGqlBuilder.build());
+GqlNodeContext select = selectorFacade.select(queryString, gqlexBuilder.build());
 ```
 
 
@@ -501,7 +501,7 @@ Here the code:
         // Node newNode = new Field("new_name");
         Node excludeDirectiveNode = TransformUtils.updateNodeName(includeDirectiveNode, "exclude");
 
-        String newGqlValue = eXtendGqlWriter.writeToString(excludeDirectiveNode);
+        String newGqlValue = gqlexWriter.writeToString(excludeDirectiveNode);
 
         System.out.println("\nAfter manipulation:\n\n" + newGqlValue);
 
@@ -522,9 +522,9 @@ query Hero($episode: Episode, $withFriends: Boolean!) {
 }
 ```
 
-## eXtendGql Use Cases
-The eXtendGql can be used during base code while the developer required to enrich GraphQL document with more fields, while querying server for data, or during manipulation of data in server, so the code can articulate the relevant fields to manipulate in the service side.
-The eXtendGql can also be utilize during integration or E2E testing, generating of synthetic GraphQL data, result with high velocity and managed solution.
+## gqlex Use Cases
+The gqlex can be used during base code while the developer required to enrich GraphQL document with more fields, while querying server for data, or during manipulation of data in server, so the code can articulate the relevant fields to manipulate in the service side.
+The gqlex can also be utilize during integration or E2E testing, generating of synthetic GraphQL data, result with high velocity and managed solution.
 
 I elaborate the following use cases with more details:
 
@@ -565,7 +565,7 @@ new_graphql_document = execute_plan -> ... use of TransformExecuter
 Versatility and an extremely high ability to produce synthetic GraphQL data and a high ability to verify the integrity of a GraphQL service.
 
 > Articulate GraphQL document on-the-fly
-Sometime you required to build query or mutation upon configuration on the fly or upon business logic, and send it to the GraphQL server, The **eXtendGql** library will assist you while doing it, The **eXtendGql** library does not support creation (only manipulation) of the skeleton file and will not support (as for now).
+Sometime you required to build query or mutation upon configuration on the fly or upon business logic, and send it to the GraphQL server, The **gqlex** library will assist you while doing it, The **gqlex** library does not support creation (only manipulation) of the skeleton file and will not support (as for now).
 The developer can create the skeleton GraphQL file, store the file in resource folder.
 _skeleton file, means file with structure but without field only._
 And with relevant plan use of syntaxPath we can assemble the gqlXPath and set the plan strategy on the fly, use of TransformBuilder.
