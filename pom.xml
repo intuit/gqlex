@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java</artifactId>
-            <version>20.4</version>
+            <version>22.1</version>
         </dependency>
 
         <dependency>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20230227</version>
+            <version>20240303</version>
         </dependency>
 
         <dependency>
